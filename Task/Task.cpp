@@ -12,10 +12,10 @@ Task::Task(std::function<void(Task*)> callback, unsigned int timeout = 100)
 
 void Task::run(unsigned int time) {
 	if (active && (time - begin) >= timeout) {
-		callback(this);
-		begin = time;
 		count++;
 		track++;
+		begin = time;
+		callback(this);
 	}
 }
 

@@ -58,7 +58,5 @@ int main() {
 	int sum1 = func::reduce(v, plus, 0);
 	std::cout << sum << " " << sum1;
 
-	checkZip();
-	func::hmm(56, 'a');
 	return 0;
 }
